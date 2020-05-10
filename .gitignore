@@ -1,4 +1,9 @@
+/.history
 /.vs
-/KimoEmailCode/bin
-/KimoEmailCode/obj
+/EmailBuilder/bin
+/EmailBuilder/obj
+/installers
 /packages
+/installer.bat
+/installer.nsi
+/nsistrb.exe

@@ -125,17 +125,6 @@ namespace Zoranner.EmailBuilder
             RefreshHtml(true);
         }
 
-        private void MainWindow_Closed(object sender, EventArgs e)
-        {
-            if (!htmlBrowser.IsBrowserInitialized)
-            {
-                return;
-            }
-
-            htmlBrowser.GetBrowser().CloseBrowser(true);
-            htmlBrowser.Dispose();
-        }
-
         private void ClipboardThread()
         {
             try
@@ -154,7 +143,7 @@ namespace Zoranner.EmailBuilder
                 BuildHtml();
             }
 
-            if (!htmlBrowser.IsBrowserInitialized)
+            if (!htmlBrowser.IsBrowserInitialized || htmlBrowser.Address != _TemporaryPath)
             {
                 htmlBrowser.Address = _TemporaryPath;
             }

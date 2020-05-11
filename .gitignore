@@ -5,8 +5,8 @@
 /src/EmailBuilder/obj
 /src/Upgrader/bin
 /src/Upgrader/obj
-/installers
 /src/packages
+/build/installers
 /installer.bat
-/installer.nsi
+/build/installer.nsi
 /nsistrb.exe

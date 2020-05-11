@@ -18,7 +18,7 @@
                 <ColumnDefinition Width="320"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Border x:Name="MaskBorder" Grid.Column="0" CornerRadius="4" Background="{StaticResource BackgroundBrush}"/>
-            <Grid>
+            <Grid Grid.Column="0">
                 <Grid.OpacityMask>
                     <VisualBrush Visual="{Binding ElementName=MaskBorder}"/>
                 </Grid.OpacityMask>
@@ -46,10 +46,14 @@
                             <ColumnDefinition Width="110"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <TextBox x:Name="headerText" Grid.Row="0" Grid.ColumnSpan="2" hc:InfoElement.Placeholder="奇先生" hc:InfoElement.Title="问候语" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Necessary="True"/>
-                        <TextBox x:Name="contentText" Grid.Row="1" Grid.ColumnSpan="2" hc:InfoElement.Placeholder="这是一封邮件模板。" hc:InfoElement.Title="邮件内容" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Necessary="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Top"/>
-                        <TextBox x:Name="senderText" Grid.Row="2" Grid.ColumnSpan="2" hc:InfoElement.Placeholder="奇梦科技" hc:InfoElement.Title="发件人" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Necessary="True"/>
-                        <TextBox x:Name="mobileText" Grid.Row="3" Grid.ColumnSpan="2" hc:InfoElement.Placeholder="1xxxxxxxxxx" hc:InfoElement.Title="手机号码" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Necessary="True" MaxLength="11" input:InputMethod.IsInputMethodEnabled="False" PreviewTextInput="MobileText_PreviewTextInput" TextChanged="MobileText_TextChanged"/>
-                        <TextBox x:Name="emailText" Grid.Row="4" Grid.ColumnSpan="2" hc:InfoElement.Placeholder="kimotech" hc:InfoElement.Title="电子邮箱" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Necessary="True" MaxLength="15" input:InputMethod.IsInputMethodEnabled="False" TextChanged="EmailText_TextChanged"/>
+                        <TextBox x:Name="contentText" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0"
+                                 hc:InfoElement.Placeholder="这是一封邮件模板。" hc:InfoElement.Title="邮件内容" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Necessary="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Top"/>
+                        <TextBox x:Name="senderText" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"
+                                 hc:InfoElement.Placeholder="奇梦科技" hc:InfoElement.Title="发件人" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Necessary="True"/>
+                        <TextBox x:Name="mobileText" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0"
+                                 hc:InfoElement.Placeholder="1xxxxxxxxxx" hc:InfoElement.Title="手机号码" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Necessary="True" MaxLength="11" input:InputMethod.IsInputMethodEnabled="False" PreviewTextInput="MobileText_PreviewTextInput" TextChanged="MobileText_TextChanged"/>
+                        <TextBox x:Name="emailText" Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="0"
+                                 hc:InfoElement.Placeholder="kimotech" hc:InfoElement.Title="电子邮箱" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Necessary="True" MaxLength="15" input:InputMethod.IsInputMethodEnabled="False" TextChanged="EmailText_TextChanged"/>
                         <TextBlock Grid.Row="4" Grid.Column="1" Text="@kimo-tech.com" Background="{StaticResource RegionBrush}" Margin="0,30,1,1" Padding="0,8,10,0" TextAlignment="Right"/>
                         <Button x:Name="copyButton" Grid.Row="5" Grid.Column="0" Content="拷贝代码" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,5,0" Click="CopyButton_Click"/>
                         <Button x:Name="buildButton" Grid.Row="5" Grid.Column="1" Content="生成" Style="{StaticResource ButtonPrimary}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,0,0,0" Click="BuildButton_Click"/>

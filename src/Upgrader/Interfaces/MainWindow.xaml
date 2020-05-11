@@ -1,0 +1,26 @@
+﻿<hc:Window x:Class="Zoranner.Upgrader.MainWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:hc="https://handyorg.github.io/handycontrol"
+           mc:Ignorable="d"
+           Title="在线更新" Height="130" Width="550" MaxHeight="130" MaxWidth="550" MinHeight="130" MinWidth="550" 
+           ResizeMode="NoResize" WindowStartupLocation="CenterScreen" BorderThickness="0" Background="{StaticResource RegionBrush}">
+    <hc:SimplePanel  Background="{StaticResource CloudDrawingBrush}">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:Name="DownName" Text="更新进度：" Margin ="10,0,10,0" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"  />
+            <TextBlock x:Name="DownPercent" Text="83%" Margin ="10,0,10,0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" />
+            <ProgressBar x:Name="DownProgress" Margin ="10,5,10,15" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Maximum="1" Style="{StaticResource ProgressBarWarningStripe}"/>
+        </Grid>
+    </hc:SimplePanel>
+</hc:Window>

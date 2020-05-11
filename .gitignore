@@ -1,9 +1,9 @@
 /.history
 /.vs
-/EmailBuilder/bin
-/EmailBuilder/obj
+/src/EmailBuilder/bin
+/src/EmailBuilder/obj
 /installers
-/packages
+/src/packages
 /installer.bat
 /installer.nsi
 /nsistrb.exe

@@ -20,7 +20,7 @@
 
             <TextBlock x:Name="DownName" Text="更新进度：" Margin ="10,0,10,0" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"  />
             <TextBlock x:Name="DownPercent" Text="83%" Margin ="10,0,10,0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" />
-            <ProgressBar x:Name="DownProgress" Margin ="10,5,10,15" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Maximum="1" Style="{StaticResource ProgressBarWarningStripe}"/>
+            <ProgressBar x:Name="DownProgress" Margin ="10,5,10,15" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Maximum="1" IsTabStop="False" FontSize="0.01" AutomationProperties.Name="Test"/>
         </Grid>
     </hc:SimplePanel>
 </hc:Window>

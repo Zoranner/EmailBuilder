@@ -131,7 +131,10 @@ namespace Zoranner.EmailBuilder
             {
                 Clipboard.SetText(_TemporaryContent);
             }
-            catch { }
+            catch
+            {
+                // ignored
+            }
         }
 
         private void RefreshHtml(bool force = false)
